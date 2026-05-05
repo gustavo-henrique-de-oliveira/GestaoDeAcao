@@ -1,0 +1,268 @@
+{
+  "info": {
+    "_postman_id": "ed39a6cf-8f35-47bd-a8ab-0c7254bab29f",
+    "name": "GestaoDeAcao",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48369349",
+    "_collection_link": "https://go.postman.co/collection/48369349-ed39a6cf-8f35-47bd-a8ab-0c7254bab29f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Acao",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ticker\": \"PETR4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/acoes",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "acoes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "listAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/acoes",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "acoes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findByTicker",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/acoes/ticker/PETR4",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "acoes",
+                "ticker",
+                "PETR4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "atualizar-cotacao",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/acoes/1/atualizar-cotacao",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "acoes",
+                "1",
+                "atualizar-cotacao"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/acoes/1",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "acoes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ticker\": \"VALE3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/acoes",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "acoes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Corretora",
+      "item": [
+        {
+          "name": "listAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cnpj\": \"123456789\",\r\n  \"cep\": \"01001000\"\r\n}"
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/corretoras",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "corretoras"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"cnpj\": \"00000000000191\",\r\n  \"cep\": \"01001000\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/corretoras",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "corretoras"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/corretoras/1",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "corretoras",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findByCnpj",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/corretoras/cnpj/00000000000191",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "corretoras",
+                "cnpj",
+                "00000000000191"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cnpj\": \"02332886000104\",\r\n    \"cep\": \"91790072\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/corretoras",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "corretoras"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
